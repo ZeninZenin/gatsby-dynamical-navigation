@@ -2,9 +2,31 @@
   "name": "gatsby-dynamical-navigation",
   "version": "0.0.1",
   "description": "Dynamical navigation plugin for gatsbyjs",
-  "main": "index.js",
-  "author": "Sergey Zenin",
+  "main": "dist/index",
+  "typings": "dist/index",
+  "author": "Sergey Zenin Sergey_Zenin@epam.com",
+  "scripts": {
+    "prepublishOnly": "npm run compile",
+    "compile": "npm run clean && tsc -p .",
+    "watch": "tsc -w -p .",
+    "clean": "rm -rf dist"
+  },
+  "bugs": {
+    "url": "https://github.com/ZeninZenin/gatsby-dynamical-navigation/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ZeninZenin/gatsby-dynamical-navigation.git"
+  },
+  "keywords": [
+    "gatsbyjs",
+    "gatsby-plugin",
+    "dynamical-navigation"
+  ],
   "license": "MIT",
+  "files": [
+    "dist/index.js"
+  ],
   "devDependencies": {
     "@types/node": "^12.7.1",
     "typescript": "^3.5.3"
