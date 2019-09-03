@@ -1,0 +1,20 @@
+{
+  "name": "gatsby-dynamical-navigation",
+  "version": "0.0.1",
+  "description": "Dynamical navigation plugin for gatsbyjs",
+  "main": "index.js",
+  "author": "Sergey Zenin",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^12.7.1",
+    "typescript": "^3.5.3"
+  },
+  "dependencies": {
+    "directory-tree": "^2.2.3",
+    "gray-matter": "^4.0.2"
+  },
+  "peerDependencies": {
+    "gatsby-link": "^2.2.5",
+    "react": "^16.9.0"
+  }
+}
