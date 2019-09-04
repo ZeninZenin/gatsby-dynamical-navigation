@@ -28,3 +28,10 @@ export type CreateNodes = (
 type CreateNodeField = (args: { node: Node; name?: string; value: boolean }) => void;
 
 export type MarkRoots = (getNodes: Function, createNodeField: CreateNodeField) => void;
+
+type furtherClassNameObject = {
+  flag: boolean;
+  className: string;
+};
+
+export type GetClassName = (baseClassName: string, classNames: furtherClassNameObject[]) => string;
