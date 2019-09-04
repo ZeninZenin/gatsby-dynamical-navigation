@@ -1,5 +1,6 @@
 import { LinkObject, NavigationNode } from '../interfaces';
 import { NodeInput, Node } from 'gatsby';
+import dirTree = require('directory-tree');
 
 export type GetPageAttrs = (
   path: string,
@@ -14,7 +15,7 @@ export type ReadFile = PathConverter;
 export type GetNormalPath = PathConverter;
 export type GetPathWithoutExtension = PathConverter;
 
-export type GetLinks = (tree: directoryTree.DirectoryTree, links?: LinkObject[]) => LinkObject[];
+export type GetLinks = (tree: dirTree.DirectoryTree, links?: LinkObject[]) => LinkObject[];
 export type SortLinks = (links: LinkObject[]) => LinkObject[];
 
 export type CreateNodes = (
