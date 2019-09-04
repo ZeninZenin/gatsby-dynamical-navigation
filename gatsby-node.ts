@@ -46,5 +46,5 @@ export const createPages: CreatePages = async ({ graphql }) => {
 
   const reducedData = data.allSiteNavigation.edges.map(({ node }) => node);
 
-  fs.writeFileSync('static/site-navigation.json', JSON.stringify(reducedData));
+  fs.writeFileSync('public/site-navigation.json', JSON.stringify(reducedData));
 };
