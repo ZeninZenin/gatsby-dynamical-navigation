@@ -1,13 +1,13 @@
 {
   "compilerOptions": {
     "module": "commonjs",
-    "target": "es5",
+    "target": "es2017",
     "outDir": "./dist",
     "moduleResolution": "node",
-    "declaration": true,
     "jsx": "react"
   },
   "include": [
-    "index.ts"
+    "index.ts",
+    "gatsby-node.ts"
   ]
 }
