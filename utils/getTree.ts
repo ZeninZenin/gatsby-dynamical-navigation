@@ -1,4 +1,4 @@
-import dirTree from 'directory-tree';
+import dirTree = require('directory-tree');
 
 export default (): dirTree.DirectoryTree =>
   dirTree('src/pages', {

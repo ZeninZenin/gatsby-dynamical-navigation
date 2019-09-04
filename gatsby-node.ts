@@ -1,4 +1,4 @@
-import fs from 'fs';
+import fs = require('fs');
 import { SourceNodes, CreatePages, AllSiteNavigationData } from './interfaces';
 import getLinks from './utils/getLinks';
 import sortLinks from './utils/sortLinks';

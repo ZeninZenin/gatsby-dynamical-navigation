@@ -1,5 +1,5 @@
 import { GetPageAttrs } from './interfaces';
-import matter from 'gray-matter';
+import matter = require('gray-matter');
 import { Frontmatter } from '../interfaces';
 import readFile from './readFile';
 

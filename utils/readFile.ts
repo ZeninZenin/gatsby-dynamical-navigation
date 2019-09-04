@@ -1,4 +1,4 @@
-import fs from 'fs';
+import fs = require('fs');
 import { ReadFile } from './interfaces';
 
 const readFile: ReadFile = path => {
