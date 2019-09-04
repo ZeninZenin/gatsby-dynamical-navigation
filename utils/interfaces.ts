@@ -1,4 +1,4 @@
-import { LinkObject } from '../interfaces';
+import { LinkObject, NavigationNode } from '../interfaces';
 import { NodeInput, Node } from 'gatsby';
 
 export type GetPageAttrs = (
@@ -35,3 +35,6 @@ type furtherClassNameObject = {
 };
 
 export type GetClassName = (baseClassName: string, classNames: furtherClassNameObject[]) => string;
+export type FilterNavigation = (navigation: NavigationNode[], requiredNodePaths: string[]) => NavigationNode[];
+export type GetRequiredPaths = (relativeLocation: string, root: string) => string[];
+export type SortNavigation = (requiredNavigation: NavigationNode[]) => NavigationNode[];

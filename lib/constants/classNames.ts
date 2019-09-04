@@ -12,6 +12,7 @@ export const HEAD_MODIFIER = 'head';
 
 export const CLASSNAME_SEPARATOR = ' ';
 export const NAVIGATION_LINK_CLASSNAME = 'gatsby-dnmcl-nav-link';
+export const NAVIGATION_CLASSNAME = 'gatsby-dnmcl-nav';
 
 export const NAVIGATION_LIST_CLASSNAME = 'gatsby-dnmcl-nav-list';
 export const NAVIGATION_LIST_ITEM_CLASSNAME = `${NAVIGATION_LIST_CLASSNAME}${ELEMENT_SEPARATOR}item`;
