@@ -1,6 +1,6 @@
 {
   "name": "gatsby-dynamical-navigation",
-  "version": "0.0.5",
+  "version": "0.1.0",
   "description": "Dynamical navigation plugin for gatsbyjs",
   "main": "index",
   "typings": "index",

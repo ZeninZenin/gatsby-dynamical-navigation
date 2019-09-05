@@ -26,5 +26,5 @@ interface NavigationProps {
 
 declare module 'gatsby-dynamical-navigation' {
   export const Navigation: React.FC<NavigationProps>;
-  export function loadNavigation(callback: () => void, isNavNotLoaded?: boolean): CurrentNavigation;
+  export function loadNavigation(callback: (navigation: NavigationNode[]) => void): void;
 }

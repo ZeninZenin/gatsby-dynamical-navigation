@@ -7,12 +7,13 @@ import sortNavigation from '../../../utils/sortNavigation';
 import { NavigationList } from '../NavigationList/intex';
 import { NavigationLink } from '../NavigationLink';
 import { NAVIGATION_CLASSNAME } from '../../constants/classNames';
+import { NavigationNode } from '../../../interfaces';
 
 const Navigation: NavigationComponent = ({ root, target, loader }) => {
-  const [isNavNotLoaded, setIsNavNotLoaded] = React.useState(true);
-  const navigation = loadNavigation(() => setIsNavNotLoaded(false), isNavNotLoaded);
+  const [navigation, setNavigation] = React.useState<NavigationNode[]>(null);
 
   if (!navigation) {
+    loadNavigation(navigation => setNavigation(navigation));
     return loader ? <>{loader}</> : <span>Navigation is not loaded</span>;
   }
 

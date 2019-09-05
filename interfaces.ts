@@ -21,7 +21,7 @@ export interface NavigationDataItem {
 }
 
 export type CurrentNavigation = NavigationNode[] | null;
-export type LoadNavigation = (callback: () => void, isNavNotLoaded?: boolean) => CurrentNavigation;
+export type LoadNavigation = (callback: (navigation: NavigationNode[]) => void) => void;
 
 export interface LinkObject extends NavigationLink {
   order?: number;
