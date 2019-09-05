@@ -7,11 +7,10 @@
   "author": "Sergey Zenin Sergey_Zenin@epam.com",
   "scripts": {
     "prepublishOnly": "npm run compile",
-    "compile": "npm run clean && tsc -p . && npm run generate-declaration && npm run clean-interfaces",
+    "compile": "npm run clean && tsc -p . && npm run clean-interfaces",
     "watch": "tsc -w -p .",
     "clean": "rimraf dist",
-    "clean-interfaces": "rimraf dist/interfaces.js dist/utils/interfaces.js dist/lib/components/**/*.interfaces.js",
-    "generate-declaration": "dts-generator --project . --out dist/index.d.ts"
+    "clean-interfaces": "rimraf dist/interfaces.js dist/utils/interfaces.js dist/lib/components/**/*.interfaces.js"
   },
   "bugs": {
     "url": "https://github.com/ZeninZenin/gatsby-dynamical-navigation/issues"
@@ -36,7 +35,6 @@
     "@types/node": "^12.7.1",
     "@typescript-eslint/eslint-plugin": "^2.1.0",
     "@typescript-eslint/parser": "^2.1.0",
-    "dts-generator": "^3.0.0",
     "eslint": "^6.3.0",
     "eslint-config-prettier": "^6.1.0",
     "eslint-plugin-prettier": "^3.1.0",
