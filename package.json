@@ -4,7 +4,7 @@
   "description": "Dynamical navigation plugin for gatsbyjs",
   "main": "index",
   "typings": "index",
-  "author": "Sergey Zenin Sergey_Zenin@epam.com",
+  "author": "Sergey Zenin zeninser@outlook.com",
   "scripts": {
     "prepublishOnly": "npm run compile",
     "compile": "npm run clean && tsc -p . && npm run clean-interfaces",
