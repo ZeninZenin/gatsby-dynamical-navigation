@@ -28,6 +28,7 @@
   "files": [
     "index.js",
     "gatsby-node.js",
+    "index.d.ts",
     "dist"
   ],
   "devDependencies": {
