@@ -6,7 +6,7 @@ import { NAVIGATION_LIST_ITEM_CLASSNAME } from '../../constants/classNames';
 const NavigationItem: NavigationItemComponent = ({ path, title, isToPage, children }) => {
   return (
     <li className={NAVIGATION_LIST_ITEM_CLASSNAME}>
-      <NavigationLink {...{ to: path, isToPage, isTarget: !children }}>{title}</NavigationLink>
+      <NavigationLink {...{ to: path, isToPage, isTarget: !!children }}>{title}</NavigationLink>
       {children}
     </li>
   );
