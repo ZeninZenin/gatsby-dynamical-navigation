@@ -45,10 +45,7 @@
   },
   "dependencies": {
     "directory-tree": "^2.2.3",
-    "gray-matter": "^4.0.2"
-  },
-  "peerDependencies": {
-    "gatsby-link": "^2.2.5",
-    "react": "^16.9.0"
+    "gray-matter": "^4.0.2",
+    "react": "^16.8.0"
   }
 }
