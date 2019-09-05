@@ -21,6 +21,7 @@ export interface NavigationDataItem {
 }
 
 export type CurrentNavigation = NavigationNode[] | null;
+export type RequestPromise = Promise<NavigationNode[]> | null;
 export type LoadNavigation = (callback: (navigation: NavigationNode[]) => void) => void;
 
 export interface LinkObject extends NavigationLink {
