@@ -2,8 +2,8 @@
   "name": "gatsby-dynamical-navigation",
   "version": "0.0.3",
   "description": "Dynamical navigation plugin for gatsbyjs",
-  "main": "dist/index",
-  "typings": "dist/index",
+  "main": "index",
+  "typings": "index",
   "author": "Sergey Zenin Sergey_Zenin@epam.com",
   "scripts": {
     "prepublishOnly": "npm run compile",
@@ -27,8 +27,8 @@
   ],
   "license": "MIT",
   "files": [
-    "dist/index.js",
-    "dist/gatsby-node.js",
+    "index.js",
+    "gatsby-node.js",
     "dist/lib",
     "dist/utils"
   ],
