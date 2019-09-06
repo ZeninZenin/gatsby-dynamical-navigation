@@ -1,5 +1,3 @@
-import { ReactNode } from 'react';
-
 interface ChildSiteNavigation extends NavigationLink {
   order?: number;
   fields: {
@@ -21,7 +19,7 @@ type CurrentNavigation = NavigationNode[] | null;
 interface NavigationProps {
   root: string;
   target: string;
-  loader?: ReactNode;
+  loader?: React.ComponentType;
 }
 
 interface NavigationState {

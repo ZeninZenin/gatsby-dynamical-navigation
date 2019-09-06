@@ -26,11 +26,11 @@ class Navigation extends React.Component<NavigationProps, NavigationState> {
   render(): JSX.Element {
     const {
       state: { navigation },
-      props: { root, target, loader },
+      props: { root, target, Loader },
     } = this;
 
     if (!navigation) {
-      return loader ? <>{loader}</> : <span>Navigation is not loaded</span>;
+      return Loader ? <Loader /> : <span>Navigation is not loaded</span>;
     }
 
     return <Nav {...{ root, target, navigation }} />;
