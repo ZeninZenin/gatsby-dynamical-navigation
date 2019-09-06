@@ -1,11 +1,12 @@
 import { ReactNode } from 'react';
+import { CurrentNavigation } from '../../../interfaces';
 
-interface NavigationProps {
+export interface NavigationProps {
   root: string;
   target: string;
   loader?: ReactNode;
 }
 
-type NavigationComponent = React.FC<NavigationProps>;
-
-export default NavigationComponent;
+export interface NavigationState {
+  navigation: CurrentNavigation;
+}

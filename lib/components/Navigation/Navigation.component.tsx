@@ -1,53 +1,40 @@
 import * as React from 'react';
-import NavigationComponent from './Navigation.interfaces';
+import { NavigationProps, NavigationState } from './Navigation.interfaces';
 import loadNavigation from '../../loadNavigation';
-import getRequiredPaths from '../../../utils/getRequiredPaths';
-import filterNavigation from '../../../utils/filterNavigation';
-import sortNavigation from '../../../utils/sortNavigation';
-import { NavigationList } from '../NavigationList/intex';
-import { NavigationLink } from '../NavigationLink';
-import { NAVIGATION_CLASSNAME } from '../../constants/classNames';
 import { NavigationNode } from '../../../interfaces';
+import Nav from './components/index';
 
-const Navigation: NavigationComponent = ({ root, target, loader }) => {
-  const [navigation, setNavigation] = React.useState<NavigationNode[]>(null);
+class Navigation extends React.Component<NavigationProps, NavigationState> {
+  constructor(props) {
+    super(props);
 
-  if (!navigation) {
-    loadNavigation(navigation => setNavigation(navigation));
-    return loader ? <>{loader}</> : <span>Navigation is not loaded</span>;
+    this.state = {
+      navigation: null,
+    };
+
+    this.setNavigation = this.setNavigation.bind(this);
   }
 
-  const relativeLocation = target.replace(root, '');
-  const requiredNodePaths = getRequiredPaths(relativeLocation, root);
-  const requiredNavigation = filterNavigation(navigation, requiredNodePaths);
-  const sortedNavigation = sortNavigation(requiredNavigation);
+  setNavigation(navigation: NavigationNode[]): void {
+    this.setState({ navigation });
+  }
 
-  const [component] = sortedNavigation.reduce<[JSX.Element, string] | [null]>(
-    ([component, rootPath], { path, title: rootTitle, childrenSiteNavigation }, i) => {
-      const resultComponent = (
-        <>
-          {i >= sortedNavigation.length - 1 && (
-            <NavigationLink to={path} isHead={true}>
-              {rootTitle}
-            </NavigationLink>
-          )}
-          <NavigationList
-            {...{
-              key: `nav-list${i}`,
-              rootPath,
-              childrenSiteNavigation,
-              children: component,
-            }}
-          ></NavigationList>
-        </>
-      );
+  componentWillMount(): void {
+    loadNavigation(navigation => this.setNavigation(navigation));
+  }
 
-      return [resultComponent, path];
-    },
-    [null],
-  );
+  render(): JSX.Element {
+    const {
+      state: { navigation },
+      props: { root, target, loader },
+    } = this;
 
-  return <nav className={NAVIGATION_CLASSNAME}>{component}</nav>;
-};
+    if (!navigation) {
+      return loader ? <>{loader}</> : <span>Navigation is not loaded</span>;
+    }
+
+    return <Nav {...{ root, target, navigation }} />;
+  }
+}
 
 export default Navigation;

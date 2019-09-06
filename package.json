@@ -46,7 +46,9 @@
   },
   "dependencies": {
     "directory-tree": "^2.2.3",
-    "gray-matter": "^4.0.2",
-    "react": "^16.8.0"
+    "gray-matter": "^4.0.2"
+  },
+  "peerDependencies": {
+    "react": "^16.0.0"
   }
 }
