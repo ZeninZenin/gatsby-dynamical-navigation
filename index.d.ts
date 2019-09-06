@@ -19,7 +19,7 @@ type CurrentNavigation = NavigationNode[] | null;
 interface NavigationProps {
   root: string;
   target: string;
-  loader?: React.ComponentType;
+  Loader?: React.ComponentType;
 }
 
 interface NavigationState {
