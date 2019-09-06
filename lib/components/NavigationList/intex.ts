@@ -1,1 +1,1 @@
-export { default as NavigationList } from './NavigationList.component';
+export { default } from './NavigationList.component';

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import NavigationItemComponent from './NavigationItem.interfaces';
-import { NavigationLink } from '../NavigationLink';
+import NavigationLink from '../NavigationLink';
 import { NAVIGATION_LIST_ITEM_CLASSNAME } from '../../constants/classNames';
 
 const NavigationItem: NavigationItemComponent = ({ path, title, isToPage, children }) => {

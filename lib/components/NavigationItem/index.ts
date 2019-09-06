@@ -1,1 +1,1 @@
-export { default as NavigationItem } from './NavigationItem.component';
+export { default } from './NavigationItem.component';

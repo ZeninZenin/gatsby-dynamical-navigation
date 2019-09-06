@@ -4,8 +4,8 @@ import { NAVIGATION_CLASSNAME } from '../../../../lib/constants/classNames';
 import getRequiredPaths from '../../../../utils/getRequiredPaths';
 import filterNavigation from '../../../../utils/filterNavigation';
 import sortNavigation from '../../../../utils/sortNavigation';
-import { NavigationLink } from '../../../../lib/components/NavigationLink';
-import { NavigationList } from '../../../../lib/components/NavigationList/intex';
+import NavigationLink from '../../../../lib/components/NavigationLink';
+import NavigationList from '../../../../lib/components/NavigationList/intex';
 
 const Nav: NavComponent = ({ navigation, root, target }) => {
   const relativeLocation = target.replace(root, '');

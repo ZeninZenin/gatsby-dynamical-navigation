@@ -1,2 +1,2 @@
 export { default as loadNavigation } from './lib/loadNavigation';
-export { Navigation } from './lib/components/Navigation';
+export { default as Navigation } from './lib/components/Navigation';

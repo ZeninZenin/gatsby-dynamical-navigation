@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { NavigationItem } from '../NavigationItem';
+import NavigationItem from '../NavigationItem';
 import NavigationListComponent from './NavigationList.interfaces';
 import { NAVIGATION_LIST_CLASSNAME } from '../../constants/classNames';
 
