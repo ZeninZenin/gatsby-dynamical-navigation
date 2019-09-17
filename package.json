@@ -6,7 +6,7 @@
   "typings": "index",
   "author": "Sergey Zenin zeninser@outlook.com",
   "scripts": {
-    "prepublishOnly": "npm run compile",
+    "prepublishOnly": "npm run test && npm run compile",
     "compile": "npm run clean && tsc -p . && npm run clean-interfaces",
     "watch": "tsc -w -p .",
     "clean": "rimraf dist",
