@@ -9,5 +9,8 @@
   "include": [
     "index.ts",
     "gatsby-node.ts"
+  ],
+  "exclude": [
+    "utils/__tests__/**/*"
   ]
 }
