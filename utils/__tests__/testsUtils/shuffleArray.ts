@@ -1,11 +1,6 @@
-import { GetInputs } from "./interfaces";
-import { NavigationNode } from "../../../interfaces";
-
-test.skip('skip', () => {});
-
-const getInputs: GetInputs = array => {
+const shuffleArray = <T>(array: T[]) => {
   let processingArray = Array.from(array); 
-  let result: NavigationNode[] = [];
+  let result: T[] = [];
 
   while (0 !== processingArray.length) {
     const randomIndex = Math.floor(Math.random() * processingArray.length);
@@ -17,4 +12,4 @@ const getInputs: GetInputs = array => {
   return result;
 }
 
-export default getInputs;
+export default shuffleArray;

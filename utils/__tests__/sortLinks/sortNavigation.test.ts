@@ -1,4 +1,4 @@
-import sortNavigation from '../../sortNavigation';
+import sortLinks from '../../sortLinks';
 import getOutputs from './outputs';
 import shuffleArray from '../testsUtils/shuffleArray';
 
@@ -7,5 +7,5 @@ const outputs = getOutputs(arrayLenght);
 const inputs = shuffleArray(outputs)
 
 test('sort navigation items by deep', () => {
-  expect(sortNavigation(inputs)).toStrictEqual(outputs);
+  expect(sortLinks(inputs)).toStrictEqual(outputs);
 });
