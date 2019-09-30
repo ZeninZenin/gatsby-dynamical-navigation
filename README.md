@@ -101,6 +101,21 @@ The `title` and` navTitle` fields are used as the text of links for navigation. 
 
 `order` is optional. It is necessary to organize the links when displaying.
 
+## Using of custom paths `starting from version 0.4.0`
+
+It's allowed use a navigation scheme that is not based on the file system in `src/pages`, but on your own logic (*when field `slug` creates from `frontmatter`'s attribute `path`*):
+
+```markdown
+---
+title: some-title
+path: /section/sub-section/page/
+---
+
+...content
+```
+
+In this case, `path` from `frontmatter` will be used to create the navigation element.
+
 ## `Navigation` component API
 
 `Navigation` is `React` component for rendering of `navigation`.
@@ -126,21 +141,6 @@ You can find an example here:
 (*Where `root` is `/dictionaries/` and `target` is `/dictionaries/html/1_html_introduction/`*)
 
 **[This site on GitHub](https://github.com/WebPurple/learn)**
-
-## Using of custom paths `starting from version 0.4.0`
-
-It's allowed use a navigation scheme that is not based on the file system in `src/pages`, but on your own logic (*when field `slug` creates from `frontmatter`'s attribute `path`*):
-
-```markdown
----
-title: some-title
-path: /section/sub-section/page/
----
-
-...content
-```
-
-In this case, `path` from `frontmatter` will be used to create the navigation element.
 
 ## `loadNavigation` API
 
