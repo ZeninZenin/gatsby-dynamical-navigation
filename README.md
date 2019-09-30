@@ -40,7 +40,7 @@ Using `frontmatter`:
 
 `/index.md`
 
-```md
+```markdown
 ---
 title: Home
 ---
@@ -50,7 +50,7 @@ title: Home
 
 `/lectures/index.md`
 
-```md
+```markdown
 ---
 title: Lectures
 ---
@@ -60,7 +60,7 @@ title: Lectures
 
 `/lectures/file1.md`
 
-```md
+```markdown
 ---
 title: lecture 1
 navTitle: HTML
@@ -72,7 +72,7 @@ order: 1
 
 `/lectures/file2.md`
 
-```md
+```markdown
 ---
 title: lecture 2
 navTitle: CSS
@@ -84,7 +84,7 @@ order: 2
 
 `/lectures/file1.md`
 
-```md
+```markdown
 ---
 title: lecture 3
 navTitle: JS
