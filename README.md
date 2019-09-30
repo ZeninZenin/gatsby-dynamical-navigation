@@ -40,7 +40,7 @@ Using `frontmatter`:
 
 `/index.md`
 
-```md
+```markdown
 ---
 title: Home
 ---
@@ -50,7 +50,7 @@ title: Home
 
 `/lectures/index.md`
 
-```md
+```markdown
 ---
 title: Lectures
 ---
@@ -60,7 +60,7 @@ title: Lectures
 
 `/lectures/file1.md`
 
-```md
+```markdown
 ---
 title: lecture 1
 navTitle: HTML
@@ -72,7 +72,7 @@ order: 1
 
 `/lectures/file2.md`
 
-```md
+```markdown
 ---
 title: lecture 2
 navTitle: CSS
@@ -84,7 +84,7 @@ order: 2
 
 `/lectures/file1.md`
 
-```md
+```markdown
 ---
 title: lecture 3
 navTitle: JS
@@ -127,6 +127,20 @@ You can find an example here:
 
 **[This site on GitHub](https://github.com/WebPurple/learn)**
 
+## Using of custom paths `starting from version 0.4.0`
+
+It's allowed use a navigation scheme that is not based on the file system in `src/pages`, but on your own logic (*when field `slug` creates from `frontmatter`'s attribute `path`*):
+
+```markdown
+---
+title: some-title
+path: /section/sub-section/page/
+---
+
+...content
+```
+
+In this case, `path` from `frontmatter` will be used to create the navigation element.
 
 ## `loadNavigation` API
 

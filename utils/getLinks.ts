@@ -18,7 +18,7 @@ const getLinks: GetLinks = (tree, links = []) => {
     const { title, order } = pageAttrs;
 
     links.push({
-      path: getNormalPath(path),
+      path: pageAttrs.path || getNormalPath(path),
       title,
       order,
     });

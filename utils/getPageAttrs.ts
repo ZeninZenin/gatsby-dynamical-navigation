@@ -8,10 +8,16 @@ const getPageAttrs: GetPageAttrs = path => {
   const { data }: { data: Frontmatter } = matter(content);
 
   if (data) {
-    const { title: pageTitle, navTitle, order } = data;
+    const { title: pageTitle, navTitle, order, path: pagePath } = data;
     const title = navTitle || pageTitle;
 
-    return title ? { title, order } : undefined;
+    let correctPagePath: string;
+
+    if (pagePath.slice(-1) !== '/') {
+      correctPagePath = `${pagePath}/`;
+    }
+
+    return title ? { title, order, path: correctPagePath } : undefined;
   }
 };
 

@@ -32,6 +32,7 @@ export type Frontmatter = Partial<{
   title: string;
   navTitle: string;
   order: number;
+  path: string;
 }>;
 
 export type SourceNodes = (args: SourceNodesArgs, options?: PluginOptions) => void;

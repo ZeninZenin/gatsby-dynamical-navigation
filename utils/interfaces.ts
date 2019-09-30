@@ -2,12 +2,15 @@ import { LinkObject, NavigationNode } from '../interfaces';
 import { NodeInput, Node } from 'gatsby';
 import dirTree = require('directory-tree');
 
-export type GetPageAttrs = (
-  path: string,
-) => Partial<{
-  title: string;
-  order: number;
-}>;
+type PageAttrs =
+  | Partial<{
+      title: string;
+      order: number;
+      path: string;
+    }>
+  | undefined;
+
+export type GetPageAttrs = (path: string) => PageAttrs;
 
 type PathConverter = (path: string) => string;
 
