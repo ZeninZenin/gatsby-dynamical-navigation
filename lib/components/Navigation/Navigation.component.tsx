@@ -19,7 +19,7 @@ class Navigation extends React.Component<NavigationProps, NavigationState> {
     this.setState({ navigation });
   }
 
-  componentWillMount(): void {
+  componentDidlMount(): void {
     loadNavigation(navigation => this.setNavigation(navigation));
   }
 
